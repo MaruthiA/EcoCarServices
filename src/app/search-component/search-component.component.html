@@ -1,0 +1,65 @@
+<section class="search-form-container">
+  <form [formGroup]="searchForm">
+    <section class="form-section">
+      <section class="location-section search-section">
+        <mat-form-field class="form-field index-one" appearance="outline">
+          <mat-label>Country</mat-label>
+          <mat-select
+            required
+            formControlName="country"
+            (selectionChange)="onSelectionChange($event)"
+          >
+            <mat-option
+              *ngFor="let country of countryList"
+              [value]="country.value"
+              >{{ country.label }}</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="form-field index-one" appearance="outline">
+          <mat-label>City</mat-label>
+          <mat-select required formControlName="city">
+            <mat-option *ngFor="let city of cityList" [value]="city?.value">{{
+              city.label
+            }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </section>
+      <section class="dates-section search-section">
+        <mat-form-field appearance="outline" class="form-field index-one">
+          <mat-label>Pickup Date</mat-label>
+          <input
+            matInput
+            formControlName="pickupDate"
+            [matDatepicker]="startDatePicker"
+            (keydown.enter)="$event.preventDefault()"
+          />
+          <mat-datepicker-toggle
+            [for]="startDatePicker"
+            matSuffix
+          ></mat-datepicker-toggle>
+          <mat-datepicker #startDatePicker color="primary"> </mat-datepicker>
+        </mat-form-field>
+        <mat-form-field class="form-field index-one" appearance="outline">
+          <mat-label>ReturnDate</mat-label>
+          <input
+            matInput
+            formControlName="returnDate"
+            [matDatepicker]="returnDatePicker"
+            (keydown.enter)="$event.preventDefault()"
+          />
+          <mat-datepicker-toggle
+            [for]="returnDatePicker"
+            matSuffix
+          ></mat-datepicker-toggle>
+          <mat-datepicker #returnDatePicker color="primary"> </mat-datepicker>
+        </mat-form-field>
+      </section>
+      <section class="center">
+        <button mat-flat-button color="primary" [disabled]="searchForm.invalid">
+          Find Cars
+        </button>
+      </section>
+    </section>
+  </form>
+</section>

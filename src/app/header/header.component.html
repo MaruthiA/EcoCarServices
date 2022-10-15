@@ -1,0 +1,26 @@
+<section class="app-header" fxLayout="row">
+  <section class="logo-section" fxLayout="row">
+    <img src="../../assets/images/mindtree-logo.svg" class="logo" />
+    <span class="title">Eco-Car Rental Services</span>
+  </section>
+  <section class="nav-menu" fxLayout="row">
+    <button mat-raised-button color="primary">Register/Login</button>
+    <button
+      mat-button
+      class="menu-button"
+      (click)="clicked()"
+      clickOutside
+      (clickOutside)="onClickedOutside()"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+  </section>
+</section>
+<div class="side-nav-container" *ngIf="isMenuOpen">
+  <section class="menu-items" fxLayout="column">
+    <a mat-button routerLink="/Home" routerLinkActive="active-link">Home</a>
+    <a mat-button routerLink="/Myprofile" routerLinkActive="active-link"
+      >My Profile</a
+    >
+  </section>
+</div>
