@@ -18,6 +18,7 @@ const routes: Routes = [
     path: 'Myprofile',
     component: MyprofileComponent,
   },
+
   {
     path:'**',
     redirectTo:'Home'
