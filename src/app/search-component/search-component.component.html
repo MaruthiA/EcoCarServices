@@ -33,6 +33,7 @@
             formControlName="pickupDate"
             [matDatepicker]="startDatePicker"
             (keydown.enter)="$event.preventDefault()"
+            [min]="minDate"
           />
           <mat-datepicker-toggle
             [for]="startDatePicker"
@@ -41,9 +42,10 @@
           <mat-datepicker #startDatePicker color="primary"> </mat-datepicker>
         </mat-form-field>
         <mat-form-field class="form-field index-one" appearance="outline">
-          <mat-label>ReturnDate</mat-label>
+          <mat-label>Return Date</mat-label>
           <input
             matInput
+            [min]="minDate"
             formControlName="returnDate"
             [matDatepicker]="returnDatePicker"
             (keydown.enter)="$event.preventDefault()"

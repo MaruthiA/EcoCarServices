@@ -30,6 +30,7 @@ export class SearchComponentComponent implements OnInit {
     ],
   };
   constructor(private fb: FormBuilder) {}
+  minDate = new Date();
 
   ngOnInit(): void {
     this.searchForm = this.fb.group({
