@@ -12,6 +12,7 @@ import { MyprofileComponent } from './myprofile/myprofile.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SearchComponentComponent } from './search-component/search-component.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SigninSignupComponent } from './Components/signin-signup/signin-signup.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MyprofileComponent,
     PageNotFoundComponent,
     SearchComponentComponent,
+    SigninSignupComponent,
   ],
   imports: [
     BrowserModule,
