@@ -19,6 +19,7 @@ const routes: Routes = [
     path: 'Myprofile',
     component: MyprofileComponent,
   },
+
   {
     path: 'search',
     component: SearchResultsComponent,
