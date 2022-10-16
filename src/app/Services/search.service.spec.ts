@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CommonhttpService } from './commonhttp.service';
+import { SearchService } from './search.service';
 
-describe('CommonhttpService', () => {
-  let service: CommonhttpService;
+describe('SearchService', () => {
+  let service: SearchService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(CommonhttpService);
+    service = TestBed.inject(SearchService);
   });
 
   it('should be created', () => {
