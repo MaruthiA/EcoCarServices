@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -13,6 +15,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { SearchComponentComponent } from './search-component/search-component.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SigninSignupComponent } from './Components/signin-signup/signin-signup.component';
+import { SearchResultsComponent } from './Components/search-results/search-results.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,7 @@ import { SigninSignupComponent } from './Components/signin-signup/signin-signup.
     PageNotFoundComponent,
     SearchComponentComponent,
     SigninSignupComponent,
+    SearchResultsComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +37,7 @@ import { SigninSignupComponent } from './Components/signin-signup/signin-signup.
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

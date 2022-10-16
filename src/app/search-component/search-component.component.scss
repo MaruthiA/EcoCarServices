@@ -52,6 +52,7 @@
 .form-section {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
   @media screen and (max-width: 767px) {
     gap: 38px;
@@ -59,4 +60,23 @@
 }
 .center {
   text-align: center;
+  align-items: center;
+  button {
+    max-width: 300px;
+  }
+}
+.unavailable-msg-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  font-weight: 500;
+}
+.mat-h2 {
+  font-size: 18px;
+  margin: 0 !important;
+  font-family: sans-serif;
+}
+.mat-h3 {
+  font-size: 14px;
+  margin: 0;
 }

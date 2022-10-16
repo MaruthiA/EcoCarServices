@@ -45,7 +45,7 @@
           <mat-label>Return Date</mat-label>
           <input
             matInput
-            [min]="minDate"
+            [min]="searchForm.get('pickupDate')?.value"
             formControlName="returnDate"
             [matDatepicker]="returnDatePicker"
             (keydown.enter)="$event.preventDefault()"
@@ -57,10 +57,21 @@
           <mat-datepicker #returnDatePicker color="primary"> </mat-datepicker>
         </mat-form-field>
       </section>
-      <section class="center">
-        <button mat-flat-button color="primary" [disabled]="searchForm.invalid">
+      <section class="center" fxLayout="column">
+        <button
+          mat-flat-button
+          color="primary"
+          [disabled]="searchForm.invalid"
+          (click)="onSearch()"
+        >
           Find Cars
         </button>
+        <section class="unavailable-msg-section" *ngIf="carsUnavailable">
+          <span class="mat-h2"
+            >Sorry, No cars available at the Selected time.
+          </span>
+          <span class="mat-h3">Try with different slots/ try again later.</span>
+        </section>
       </section>
     </section>
   </form>
