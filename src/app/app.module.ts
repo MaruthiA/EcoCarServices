@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +13,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { SearchComponentComponent } from './search-component/search-component.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SigninSignupComponent } from './Components/signin-signup/signin-signup.component';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -33,8 +35,11 @@ import { SigninSignupComponent } from './Components/signin-signup/signin-signup.
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    MatDialogModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {}

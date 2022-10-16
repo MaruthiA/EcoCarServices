@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { SigninSignupComponent } from '../Components/signin-signup/signin-signup.component';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   public isMenuOpen: boolean = false;
-  constructor() {}
+
+  constructor(private dialog: MatDialog) {}
 
   ngOnInit(): void {}
 
@@ -17,5 +20,12 @@ export class HeaderComponent implements OnInit {
   
   onClickedOutside() {
     this.isMenuOpen = false;
+  }
+
+  onRegisterLoginClick(){
+    this.dialog.open(SigninSignupComponent, {
+      minWidth:'50%',
+      maxWidth:'50%'
+    })
   }
 }
