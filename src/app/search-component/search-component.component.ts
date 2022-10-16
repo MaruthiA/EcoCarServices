@@ -47,6 +47,8 @@ export class SearchComponentComponent implements OnInit {
         Validators.required,
       ]),
       pickupDate: new FormControl('', [Validators.required]),
+      // pickupDate: new FormControl(''),
+      // returnDate: new FormControl(''),
       returnDate: new FormControl('', [Validators.required]),
     });
   }
