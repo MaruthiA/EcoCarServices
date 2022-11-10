@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import {MatDialogModule}from '@angular/material/dialog';
+import {MatTabsModule} from '@angular/material/tabs'
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -20,7 +22,9 @@ import {MatNativeDateModule} from '@angular/material/core';
     MatInputModule,
     MatSelectModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatDialogModule,
+    MatTabsModule
   ],
   exports: [
     MatIconModule,
@@ -30,7 +34,9 @@ import {MatNativeDateModule} from '@angular/material/core';
     MatInputModule,
     MatSelectModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatDialogModule,
+    MatTabsModule
   ],
 })
 export class MaterialModule {}

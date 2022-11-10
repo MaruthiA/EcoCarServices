@@ -5,6 +5,8 @@ import {
   FormBuilder,
   Validators,
 } from '@angular/forms';
+import { Router } from '@angular/router';
+import { SearchService } from '../Services/search.service';
 
 @Component({
   selector: 'app-search-component',
@@ -13,6 +15,7 @@ import {
 })
 export class SearchComponentComponent implements OnInit {
   searchForm!: FormGroup;
+  carsUnavailable = false;
   countryList = [
     { label: 'India', value: 'india' },
     { label: 'USA', value: 'us' },
@@ -29,7 +32,13 @@ export class SearchComponentComponent implements OnInit {
       { value: 'bangalore', label: 'Bangalore' },
     ],
   };
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private fb: FormBuilder,
+    private searchService: SearchService,
+    private router: Router
+  ) {}
+  minDate = new Date();
+  minDateReturn = new Date();
 
   ngOnInit(): void {
     this.searchForm = this.fb.group({
@@ -38,13 +47,27 @@ export class SearchComponentComponent implements OnInit {
         Validators.required,
       ]),
       pickupDate: new FormControl('', [Validators.required]),
+      // pickupDate: new FormControl(''),
+      // returnDate: new FormControl(''),
       returnDate: new FormControl('', [Validators.required]),
     });
   }
   onSelectionChange(eve: any) {
-    if (eve.value) {      
+    if (eve.value) {
       this.cityList = this.constants[eve.value];
       this.searchForm.get('city')?.enable();
     }
+  }
+  onSearch() {
+    const formData = new FormData();
+    formData.append('text', this.searchForm.get('city')?.value);
+    this.searchService.searchCars(formData).subscribe((res) => {
+      if (res.body.length) {
+        this.searchService.setSearchResults(res.body);
+        this.router.navigateByUrl('/search');
+      } else {
+        this.carsUnavailable = true;
+      }
+    });
   }
 }

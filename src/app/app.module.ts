@@ -1,5 +1,7 @@
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -12,6 +14,10 @@ import { MyprofileComponent } from './myprofile/myprofile.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SearchComponentComponent } from './search-component/search-component.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SigninSignupComponent } from './Components/signin-signup/signin-signup.component';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatTabsModule } from '@angular/material/tabs';
+import { SearchResultsComponent } from './Components/search-results/search-results.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +28,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MyprofileComponent,
     PageNotFoundComponent,
     SearchComponentComponent,
+    SigninSignupComponent,
+    SearchResultsComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,8 +39,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    MatDialogModule,
+    MatTabsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {}
