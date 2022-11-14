@@ -1,6 +1,8 @@
 .results-section {
   margin: 4em;
   padding: 20px;
+  margin-top: 0;
+
 }
 .results {
   max-width: 80%;
@@ -35,4 +37,8 @@
 }
 .co-emission {
   font-weight: bold;
+}
+
+.ci{
+  padding-top: -50px;
 }

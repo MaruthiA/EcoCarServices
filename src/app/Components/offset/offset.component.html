@@ -1,0 +1,41 @@
+
+
+<section class="results-section" >
+  <div>
+    <img src="../../../assets/images/eco-car.PNG" />
+  </div>
+  <section class = "banner">
+    <h2>your predicted Carbon Emission for the Trip is </h2>
+    <h1>{{this.emission}} Ton of Carbon</h1>
+    <h3>Please donate to save the nature </h3>
+</section>
+<br>
+<br>
+  <div *ngFor="let car of ngoList; let i = index" class="results">
+    <!-- <section class="car-item"> -->
+    <section class="left">
+      <img class="image" src ="../../../assets/images/carbonfootprintlogo.gif" />
+    </section>
+    <section class="right">
+         <div class="car-details">
+      <span class="title">{{ car.name }} - $ {{ car.charges }}</span>
+         </div>
+      <div class="car-details">
+        <span>URL - {{ car.url }}</span>
+      </div>
+       <div class="car-details">
+        <span>Descriptions - {{ car.work }}</span>
+        <!-- <span class="co-emission"
+          >CO2_Emissions(g/km) - {{ car.CO2_Emissions }}</span
+        > -->
+      </div>
+    </section>
+    <!-- </section> -->
+     <div class="car-details">
+        <button mat-raised-button class="image" color="primary" (click)="onSearch(car.url,car.name)">Donate</button>
+     </div>
+  </div>
+  <div class="home">
+        <button mat-raised-button class="image" color="primary" (click)="returnHome()">Return To Home Page</button>
+     </div>
+</section>

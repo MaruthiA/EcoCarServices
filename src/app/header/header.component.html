@@ -1,10 +1,30 @@
+<!-- @format -->
+
 <section class="app-header" fxLayout="row">
   <section class="logo-section" fxLayout="row">
     <img src="../../assets/images/mindtree-logo.svg" class="logo" />
     <span class="title">Eco-Car Rental Services</span>
   </section>
   <section class="nav-menu" fxLayout="row">
-    <button mat-raised-button color="primary" (click)="onRegisterLoginClick()">Login/Register</button>
+    <button
+      *ngIf="this.show; else loggedOut"
+      mat-raised-button
+      color="primary"
+      (click)="onRegisterLoginClick()"
+    >
+      Login/Register
+    </button>
+    <ng-template #loggedOut>
+      <button
+      mat-raised-button
+      color="primary"
+      (click)="onlogoutClick()"
+    >
+      Logout
+    </button>
+    </ng-template>
+    
+
     <button
       mat-button
       class="menu-button"
@@ -19,8 +39,11 @@
 <div class="side-nav-container" *ngIf="isMenuOpen">
   <section class="menu-items" fxLayout="column">
     <a mat-button routerLink="/Home" routerLinkActive="active-link">Home</a>
-    <a mat-button routerLink="/Myprofile" routerLinkActive="active-link"
+    <a mat-button routerLink="/user" routerLinkActive="active-link"
       >My Profile</a
+    >
+    <a mat-button routerLink="/leaderboard" routerLinkActive="active-link"
+      >leadersboard</a
     >
   </section>
 </div>

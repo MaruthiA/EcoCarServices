@@ -18,6 +18,11 @@ import { SigninSignupComponent } from './Components/signin-signup/signin-signup.
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatTabsModule } from '@angular/material/tabs';
 import { SearchResultsComponent } from './Components/search-results/search-results.component';
+import { OffsetComponent } from './Components/offset/offset.component';
+import { LeaderboardComponent } from './Components/leaderboard/leaderboard.component';
+import { CertificateComponent } from './Components/certificate/certificate.component';
+import { UserComponent } from './Components/user/user.component';
+import { DistanceComponent } from './Components/distance/distance.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +35,11 @@ import { SearchResultsComponent } from './Components/search-results/search-resul
     SearchComponentComponent,
     SigninSignupComponent,
     SearchResultsComponent,
+    OffsetComponent,
+    LeaderboardComponent,
+    CertificateComponent,
+    UserComponent,
+    DistanceComponent,
   ],
   imports: [
     BrowserModule,

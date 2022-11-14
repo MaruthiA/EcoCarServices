@@ -1,5 +1,5 @@
 <section class="results-section" *ngIf="carList.length">
-  <div>
+  <div class="ci">
     <img src="../../../assets/images/eco-car.PNG" />
   </div>
   <div *ngFor="let car of carList; let i = index" class="results">
@@ -10,12 +10,12 @@
     <section class="right">
       <span class="title">{{ car.Make }} - {{ car.Model }}</span>
       <div class="car-details">
-        <span>Class - {{ car.Vehicle_Class }}</span>
+        <span>Class - {{ car.Class }}</span>
         <span>Transmission - {{ car.Transmission }}</span>
         <span class="co-emission"
           >CO2_Emissions(g/km) - {{ car.CO2_Emissions }}</span
         >
-        <button mat-raised-button color="primary">Book Now</button>
+        <button *ngIf="this.show" mat-raised-button (click)="onSearch(i)" color="primary">Book Now</button>
       </div>
     </section>
     <!-- </section> -->

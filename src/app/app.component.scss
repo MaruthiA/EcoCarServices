@@ -2,8 +2,16 @@
   margin-top: 60px;
 }
 .footer {
-  margin-top: 50vh;
+  margin-top: 20vh;
   @media screen and (max-width: 767px) {
     margin-top: 60px;
   }
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #0fe036;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.217384);
+  border-radius: 2px;
+  padding: 10px;
+  width: 100%;
 }

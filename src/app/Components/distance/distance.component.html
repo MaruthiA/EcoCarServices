@@ -1,0 +1,42 @@
+<!-- @format -->
+<!-- *ngIf="this.open" -->
+<mat-tab-group mat-stretch-tabs >
+  <mat-tab label="Distance Calculator">
+    <form style="width: 100%; text-align: center">
+      <div style="width: 100%; margin-top: 25px">
+        <mat-form-field appearance="fill" style="width: 80%">
+          <mat-label>To</mat-label>
+          <input
+            id="to"
+            type="text"
+            matInput
+            
+            placeholder="to"
+          />
+         
+        </mat-form-field>
+      </div>
+
+      <div style="width: 100%; margin-top: 20px">
+        <mat-form-field appearance="fill" style="width: 80%">
+          <mat-label>From</mat-label>
+          <input
+            id="from"
+            type="text"
+            matInput
+            
+            placeholder="from"
+          />
+        </mat-form-field>
+      </div>
+
+      <div style="width: 100%; margin-top: 25px; margin-bottom: 20px">
+        <button mat-raised-button color="primary" (click)="distance()">
+          Calculate
+        </button>
+      </div>
+    </form>
+  </mat-tab>
+
+  
+</mat-tab-group>

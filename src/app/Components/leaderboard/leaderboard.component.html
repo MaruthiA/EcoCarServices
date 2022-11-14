@@ -1,0 +1,24 @@
+<section class="results-section" >
+  <div>
+    <img src="../../../assets/images/eco-car.PNG" />
+  </div>
+  <div *ngFor="let car of leaders; let i = index" class="results">
+    <!-- <section class="car-item"> -->
+    
+    <section >
+      <div class="car-details">
+      <h1>{{ car.user }} </h1>
+      
+      <!-- <h2  class = "left"> {{ car.value }}</h2>-->
+      </div> 
+      <!-- <div class="car-details">
+        <span>Class - {{ car.Vehicle_Class }}</span>
+        <span>Transmission - {{ car.Transmission }}</span>
+        <span class="co-emission"
+          >CO2_Emissions(g/km) - {{ car.CO2_Emissions }}</span
+        >
+      </div> -->
+    </section>
+    <!-- </section> -->
+  </div>
+</section>

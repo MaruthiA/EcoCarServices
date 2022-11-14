@@ -59,6 +59,18 @@ export class SearchComponentComponent implements OnInit {
     }
   }
   onSearch() {
+    const city = this.searchForm.get("city")?.value;
+    const country = this.searchForm.get("country")?.value;
+    const pickupDate = this.searchForm.get("pickupDate")?.value;
+    const returnDate = this.searchForm.get("returnDate")?.value;
+    console.log(city, country, pickupDate, returnDate)
+    
+    localStorage.setItem("city", city)
+    localStorage.setItem("country", country)
+    localStorage.setItem("pickupDate", pickupDate)
+    localStorage.setItem("returnDate",returnDate)
+
+
     const formData = new FormData();
     formData.append('text', this.searchForm.get('city')?.value);
     this.searchService.searchCars(formData).subscribe((res) => {

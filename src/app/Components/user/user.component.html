@@ -1,0 +1,42 @@
+<section class="results-section">
+  <div>
+    <img src="../../../assets/images/eco-car.PNG" />
+  </div>
+  <div class="booked">
+    <h1>Booked Car information </h1>
+  </div>
+  <br><br>
+  <div class = "card">
+    <!-- <section class="car-item"> -->
+    <section class="left">
+      <img class="image" [src]="this.url" />
+    </section>
+    <section class="right">
+      <span class="title">{{ this.car}}</span>
+      <div class="car-details">
+        <span>country - {{ country }}</span>
+      </div><div class="car-details">
+        <span>City - {{ city }}</span>
+        </div><div class="car-details">
+        <span>Pickup Date - {{ pickupDate }}</span>
+        </div><div class="car-details">
+        <span>return Date - {{ returnDate }}</span>
+        </div><div class="car-details">
+        <span class="co-emission"
+          >Expected Kms driven - {{ km }}</span
+        >
+        </div><div class="car-details">
+        <span class="co-emission"
+          >expected CO2_Emissions(Tonnes) - {{ emission }}</span
+        >
+        
+      </div>
+    </section>
+    <!-- </section> -->
+  </div>
+  <br><br><br>
+  <div class="history">
+    <h1>Previous journey information </h1>
+    <h3>No Records Found !!!!!</h3>
+  </div>
+</section>

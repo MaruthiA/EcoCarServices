@@ -1,3 +1,84 @@
-<section class="myprofile-container">
-  <p>myprofile works!</p>
+<!-- @format -->
+
+<section class="results-section">
+  <div>
+    <img src="../../../assets/images/book.png" />
+  </div>
+  <div class="results">
+    <!-- <section class="car-item"> -->
+    <div class="image">
+      <img class="image" [src]="car.url" />
+    </div>
+  </div>
+  <div>
+    <div>
+      <span class="title">{{ car.Make }} - {{ car.Model }}</span>
+      <div class="car-details">
+        <span>Class - {{ car.Class }}</span>
+      </div>
+      <div class="car-details">
+        <span>Transmission - {{ car.Transmission }}</span>
+        </div>
+      <div class="car-details">
+        <span class="co-emission"
+          >CO2_Emissions(g/km) - {{ car.CO2_Emissions }}</span
+        >
+        
+      </div>
+    </div>
+
+    <!-- </section> -->
+  </div>
+  <div class="car-details">
+ <form class="example-form">
+  <div style="width: 100%; margin-top: 25px">
+        <mat-form-field appearance="fill" style="width: 80%">
+          <mat-label>People</mat-label>
+          <input
+            id="people"
+            type="number"
+            matInput
+            
+            placeholder="people"
+          />
+         
+        </mat-form-field>
+      </div>
+
+      <div style="width: 100%; margin-top: 20px">
+        <mat-form-field appearance="fill" style="width: 80%">
+          <mat-label>Distance</mat-label>
+          <input
+            id="km"
+            type="number"
+            matInput
+            
+            placeholder="distance"
+          />
+
+          
+        </mat-form-field>
+      </div>
+
+
+
+  <!-- <div class="example-full-width" appearance="fill">
+    <label> Total Number of People </label>
+    <input id="people" matInput placeholder="Number" type ="number">
+  </div>
+
+  <div class="example-full-width" appearance="fill">
+    <label>Expected Kilometers</label>
+    <input id="km" matInput placeholder="Number" type ="number" >
+    
+    </div> -->
+    <button mat-raised-button class="distance" color="primary" (click)="distanceSearch()">Don't Know Distance Calculate here</button>
+</form>
+</div>
+  <div>
+    
+  </div>
+  <div class="image">
+  <button mat-raised-button class="image" color="primary" (click)="onSearch()">Book</button>
+  </div>
 </section>

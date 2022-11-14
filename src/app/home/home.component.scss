@@ -1,6 +1,6 @@
 .home-content {
-  background: #f5f5f5;
-  padding: 20px;
+  background: transparent;
+  // padding: 20px;
   position: absolute;
   max-width: 65%;
   left: 0;
@@ -21,7 +21,7 @@
 }
 
 .float-content {
-  height: 400px;
+  height: 100px;
   width: 500px;
   background: blue;
 }
